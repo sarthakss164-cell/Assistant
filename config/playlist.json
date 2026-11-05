@@ -1,0 +1,96 @@
+{
+  "playlists": {
+    "hindi": {
+      "name": "Hindi",
+      "songs": [
+        {
+          "title": "Zaalima",
+          "query": "Zaalima Arijit Singh"
+        },
+        {
+          "title": "Channa Mereya",
+          "query": "Channa Mereya Arijit Singh"
+        },
+        {
+          "title": "Palat Tera Hero Idhar Hai",
+          "query": "Palat Tera Hero Idhar Hai"
+        },
+        {
+          "title": "Lal Pari",
+          "query": "Lal Pari"
+        },
+        {
+          "title": "Party All Night",
+          "query": "Party All Night"
+        },
+        {
+          "title": "Yaad Piya Ki Aane Lagi",
+          "query": "Yaad Piya Ki Aane Lagi"
+        },
+        {
+          "title": "Char Botal Vodka",
+          "query": "Char Botal Vodka"
+        },
+        {
+          "title": "Make Some Noice For Desi Boys",
+          "query": "Make Some Noice For Desi Boys"
+        },
+        {
+          "title": "Dil Chori",
+          "query": "Dil Chori"
+        },
+        {
+          "title": "Galat Baat Hai",
+          "query": "Galat Baat Hai"
+        },
+        {
+          "title": "Apna Bana Le",
+          "query": "Apna Bana Le"
+        },
+        {
+          "title": "Mast Magan",
+          "query": "Mast Magan"
+        },
+        {
+          "title": "Agar Tum Saath Ho",
+          "query": "Agar Tum Saath Ho"
+        }
+      ]
+    },
+    "english": {
+      "name": "English",
+      "songs": [
+        {
+          "title": "Starboy",
+          "query": "Starboy The Weeknd"
+        },
+        {
+          "title": "Blinding Lights",
+          "query": "Blinding Lights The Weeknd"
+        },
+        {
+          "title": "Shape of You",
+          "query": "Shape of You Ed Sheeran"
+        }
+      ]
+    },
+    "story": {
+      "name": "Stories",
+      "songs": [
+        {
+          "title": "Hindi Kahaniya Episode 1",
+          "query": "https://youtu.be/s4uHblqWXXM?si=WbmKYRj2TfSa9ZJW"
+        },
+        {
+          "title": "Hindi Kahaniya Episode 2",
+          "query": "https://youtu.be/yAmTTSp5Q8s?si=5_kl2FsjZE-ByPPH"
+        },
+        {
+          "title": "Hindi Kahaniya Episode 3",
+          "query": "https://youtu.be/RGSLKS87erk?si=GUUQpZgeYHjYe-nE"
+        }
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,45 @@
+{
+  "brave": {
+    "display_name": "Brave Browser",
+    "executable": "brave.exe",
+    "executable_path": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+    "launch_arguments": [],
+    "aliases": ["brave", "brave browser"]
+  },
+  "chrome": {
+    "display_name": "Google Chrome",
+    "executable": "chrome.exe",
+    "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "launch_arguments": [],
+    "aliases": ["chrome", "google chrome"]
+  },
+  "edge": {
+    "display_name": "Microsoft Edge",
+    "executable": "msedge.exe",
+    "executable_path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+    "launch_arguments": [],
+    "aliases": ["edge", "microsoft edge", "ms edge"]
+  },
+  "notepad": {
+    "display_name": "Notepad",
+    "executable": "notepad.exe",
+    "executable_path": "C:\\Windows\\system32\\notepad.exe",
+    "launch_arguments": [],
+    "aliases": ["notepad", "notes", "text editor"]
+  },
+  "whatsapp": {
+    "display_name": "WhatsApp Web",
+    "executable": "",
+    "executable_path": "",
+    "web_url": "https://web.whatsapp.com",
+    "launch_arguments": [],
+    "aliases": ["whatsapp", "whatsapp web"]
+  },
+  "vscode": {
+    "display_name": "Visual Studio Code",
+    "executable": "Code.exe",
+    "executable_path": "",
+    "launch_arguments": [],
+    "aliases": ["vs code", "vscode", "code", "editor"]
+  }
+}

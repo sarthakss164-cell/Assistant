@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   LIGHT AI V1.0 HUD DESIGN SYSTEM
+   Palette: Deep Obsidian Black, Dark Bronze, Solar Gold, Fiery Orange, Warm Ivory
+   ========================================================================== */
+
+:root {
+  --bg-deep: #070604;
+  --bg-surface: rgba(22, 17, 11, 0.82);
+  --bg-surface-elevated: rgba(30, 22, 14, 0.90);
+  --bg-card: rgba(18, 14, 9, 0.75);
+  
+  --border-gold-subtle: rgba(245, 175, 55, 0.22);
+  --border-gold-medium: rgba(245, 175, 55, 0.45);
+  --border-gold-bright: rgba(245, 175, 55, 0.85);
+  --border-orange: rgba(255, 115, 0, 0.6);
+
+  --accent-gold: #f5af37;
+  --accent-gold-light: #ffd57a;
+  --accent-orange: #ff7300;
+  --accent-orange-deep: #ff4800;
+  --accent-bronze: #8c622d;
+  --accent-bronze-dark: #3a2613;
+
+  --text-primary: #f5ebd7;
+  --text-secondary: #c9ab81;
+  --text-muted: #826e54;
+  --text-dim: #4f4231;
+
+  --font-display: 'Orbitron', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hud: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+
+  --glow-gold-sm: 0 0 8px rgba(245, 175, 55, 0.35);
+  --glow-gold-md: 0 0 16px rgba(245, 175, 55, 0.55);
+  --glow-orange-sm: 0 0 10px rgba(255, 115, 0, 0.45);
+  --glow-orange-md: 0 0 20px rgba(255, 115, 0, 0.7);
+  --shadow-panel: 0 8px 32px 0 rgba(0, 0, 0, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-hud);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Background HUD ambient grid & vignette */
+body {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(245, 175, 55, 0.05) 0%, rgba(7, 6, 4, 0.95) 75%),
+    linear-gradient(rgba(245, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 175, 55, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+  background-position: 0 0, -1px -1px, -1px -1px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(14, 11, 7, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-bronze);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+/* Independent HUD Panel Scroll Container */
+.hud-scroll {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(140, 98, 45, 0.45) transparent;
+}
+
+.hud-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.hud-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hud-scroll::-webkit-scrollbar-thumb {
+  background: rgba(140, 98, 45, 0.35);
+  border-radius: 2px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hud-scroll:hover::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  box-shadow: 0 0 6px rgba(245, 175, 55, 0.4);
+}
+
+.hud-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold-light);
+  box-shadow: 0 0 8px rgba(245, 175, 55, 0.7);
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+}
+.font-hud {
+  font-family: var(--font-hud);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Glow Utilities */
+.glow-gold {
+  text-shadow: var(--glow-gold-md);
+}
+.glow-orange {
+  text-shadow: var(--glow-orange-md);
+}
+.border-glow-gold {
+  box-shadow: var(--glow-gold-sm);
+}
+.border-glow-orange {
+  box-shadow: var(--glow-orange-md);
+}
+
+/* HUD Panel Base */
+.hud-panel {
+  background: var(--bg-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 4px;
+  box-shadow: var(--shadow-panel);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hud-panel:hover {
+  border-color: var(--border-gold-medium);
+}
+
+/* Decorative Chamfered Corner Notches */
+.hud-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid var(--accent-gold);
+  border-left: 2px solid var(--accent-gold);
+  pointer-events: none;
+}
+
+.hud-panel::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid var(--accent-gold);
+  border-right: 2px solid var(--accent-gold);
+  pointer-events: none;
+}
+
+/* Panel Header */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-gold-subtle);
+  background: linear-gradient(90deg, rgba(245, 175, 55, 0.1) 0%, rgba(20, 16, 10, 0) 100%);
+}
+
+.panel-title {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.panel-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1px 6px;
+  border: 1px solid rgba(245, 175, 55, 0.15);
+  border-radius: 2px;
+}
+
+/* Micro animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 10px rgba(245, 175, 55, 0.4));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 22px rgba(255, 115, 0, 0.7));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.hud-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(245, 175, 55, 0.35), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+/* Draggable app bar for frameless Electron window */
+.app-drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
